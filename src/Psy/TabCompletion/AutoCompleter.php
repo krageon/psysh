@@ -78,7 +78,7 @@ class AutoCompleter
 
         $matches = array_unique($matches);
 
-        return !empty($matches) ? $matches : array('');
+        return !empty($matches) ? $matches : null;
     }
 
     /**
