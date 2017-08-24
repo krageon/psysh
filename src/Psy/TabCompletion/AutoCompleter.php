@@ -38,6 +38,7 @@ class AutoCompleter
      */
     public function activate()
     {
+        readline_info('rl_completion_append_character', "\0");
         readline_completion_function(array(&$this, 'callback'));
     }
 
