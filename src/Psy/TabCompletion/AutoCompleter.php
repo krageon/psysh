@@ -93,7 +93,9 @@ class AutoCompleter
      */
     public function callback($input, $index)
     {
-        readline_info('completion_append_character', "\0");
+        if (function_exists('readline_info')) {
+            readline_info('completion_append_character', "\0");
+        }
         return $this->processCallback($input, $index, readline_info());
     }
 
